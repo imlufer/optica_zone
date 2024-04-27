@@ -1,0 +1,14 @@
+/* ESTILOS A LAS CARTAS PROVENIENTES DEL JSON (SE APLICA DISPLAY NONE PARA OCULTAR LOS ELEMENTOS QUE NO CORRESPONDEN AL ARTICULO
+SELECCIONADO) */
+
+.card:nth-child(3) {
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    flex-direction: column;
+    transition: .2s ease-in-out;
+    margin-bottom: 20px;
+    gap: 20px;
+    border-bottom: 1px solid #bebbbb;
+    padding-bottom: 20px;
+    }

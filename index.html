@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <meta name="author" lang="es" content="LUFERDEV">
+    <meta name="keywords" content="Gafas, gafas de sol, gafas para hombres, gafas para mujeres, lentes">
+    <meta name="description" content="Bienvenidos a OpticaZone, encuentra tus gafas indicadas de alta calidad a un bajo costo.">
+    <meta name="copyright" content="Copyright Daniel David Calderón Tinjaca">  
+    <!--  Animaciones de entrada  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Carga de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="shortcut icon" href="img/logo-portafolio.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>OpticaZone</title>
+</head>
+<body>
+    <header>
+        <a href="#inicio" class="logo">OpticaZone</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#inicio" onclick="toggleMenu();">Inicio</a></li>
+            <li><a href="#stock" onclick="toggleMenu();">En stock</a></li>
+            <li><a href="#popular" onclick="toggleMenu();">Más populares</a></li>
+            <li><a href="#testimonios" onclick="toggleMenu();">Testimonios</a></li>
+            <li><a href="#contacto" onclick="toggleMenu();">Contacto</a></li>
+            <li</li>
+        </ul>
+    </div><span class="ver-carrito" id="verCarrito">
+        <i class="fa fa-shopping-cart"></i><span id="cantidadCarrito" class="cantidad-carrito">
+    </span></span>
+    </header>
+
+    <!-- ************************************** SECCION 1 - BANNER **************************************  -->
+
+    <section class="sec-banner" id="inicio">
+        <div class="contenido-bn">
+                <h1 class="titulo animate__animated animate__zoomInDown">OpticaZone</h1>
+                <h2 class="nombre profesion animate__animated animate__zoomIn">Gafas al mejor precio del mercado</h2>
+                <span class="nombre animate__animated animate__zoomIn">Vizualiza el Mundo</span>
+    </section>
+
+    <!-- ************************************** SECCION 2 - STOCK **************************************  -->
+
+    <section class="sec-stock" id="stock">
+        <h2 class="titulos">En Stock</h2>
+        <!--shop content-->
+        <div id="shopContent" class="shop-content"></div>
+        <!--modal container-->
+        <div id="modal-container" class="modal-container"></div>
+    </section>
+
+    <!-- ************************************** SECCION 3 - POPULARES **************************************  -->
+
+    <section class="sec-popular" id="popular">
+        <h2 class="titulos white">Más Populares</h2>
+        <div class="container-popl">
+            <div class="div1">
+                <img src="img/productos/hawkers-black-green-rubber-emerald-one-s-H01SHT0105-f.jpg" alt="">
+                <div class="content-card">
+                    <h3 class="nomb-prdo">Black Green Rubber Emerald</h3>
+                    <p class="desc-prdo">Gafas de sol con montura One negro mate, contorno verde en acabado engomado y lentes verdes.</p>
+                    <a href="stock/black-green-rubber-emerald-one.html">Ver Detalles</a>
+                </div>
+            </div>
+            <div class="div2">
+                <img src="img/productos/hawkers-comaneci-polarized-black-sky-HCOM22BLTP-f.jpg" alt="">
+                <div class="content-card">
+                    <h3 class="nomb-prdo">Comaneci Polarized Black Sky</h3>
+                    <p class="desc-prdo">Este modelo funcional y atrevido tiene una montura negra envolvente rectangular con terminación 
+                    de varillas para un mejor agarre. Creada con colores llamativos, combina lentes polarizadas azules espejadas con el 
+                    interior de las varillas..</p>
+                    <a href="stock/comaneci-polarized-black-sky.html">Ver Detalles</a>
+                </div>
+            </div>
+            <div class="div3">
+                <img src="img/productos/hawkers-eagle-polarized-black-brown-HEAG22DWMP-f.jpg" alt="">
+                <div class="content-card">
+                    <h3 class="nomb-prdo">Eagle Polarized Black Brown</h3>
+                    <p class="desc-prdo">Un diseño de estilo aviador que combina patillas TR90, doble puente y puntos de bisagra de acero 
+                    inoxidable, y aros híbridos TR90 de metal. Este modelo dorado y negro tiene lentes polarizadas de color marrón degradado.</p>
+                    <a href="stock/eagle-polarized-black-brown.html">Ver Detalles</a>
+                </div>
+            </div>
+            <div class="div4">
+                <img src="img/productos/hawkers-eagle-polarized-crystal-purple-HEAG22SKMP-f.jpg" alt="">
+                <div class="content-card">
+                    <h3 class="nomb-prdo">Eagle Polarized Crystal Purple</h3>
+                    <p class="desc-prdo">Un diseño de estilo aviador que combina patillas TR90, doble puente y puntos de bisagra de acero 
+                    inoxidable, y aros híbridos TR90 de metal. Este modelo plateado, de cristal transparente tiene lentes polarizadas, 
+                    espejadas y de color púrpura iridiscente.</p>
+                    <a href="stock/eagle-polarized-crystal-purple.html">Ver Detalles</a>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <!-- ************************************** SECCION 4 - TESTIMONIOS **************************************  -->
+
+    <section class="testimonios" id="testimonios"> 
+        <h2 class="titulos white">Testimonios</h2>
+        <div class="slider__container container">
+            <img src="img/fleft.png" class="slider__arrow" id="before">
+
+            <section class="slider__body slider__body--show" data-id="1">
+                <div class="slider__texts">
+                    <h2 class="subtitulo">Maria Fernanda Guzman Fernandez</h2>
+                    <p class="testimonio__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim obcaecati laudantium a atque suscipit, 
+                    in eos fugiat omnis aspernatur asperiores corporis veniam rem. Accusamus deleniti quae, rerum sit sed 
+                    ea obcaecati iste officiis.
+                    </p>
+                </div>
+                <figure class="slider__picture">
+                    <img src="img/img-testimonios/foto1.jpg" class="slider__img">
+                </figure>
+            </section>
+
+            <section class="slider__body" data-id="2">
+                <div class="slider__texts">
+                    <h2 class="subtitulo">Paula Lorena Bermudez Fernandez</h2>
+                    <p class="testimonio__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim obcaecati laudantium a atque suscipit, 
+                    in eos fugiat omnis aspernatur asperiores corporis veniam rem. Accusamus deleniti.
+                    </p>
+                </div>
+                <figure class="slider__picture">
+                    <img src="img/img-testimonios/foto2.jpg" class="slider__img">
+                </figure>
+            </section>
+
+            <section class="slider__body" data-id="3">
+                <div class="slider__texts">
+                    <h2 class="subtitulo">Maria Laura Perez Guzman</h2>
+                    <p class="testimonio__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim obcaecati laudantium a atque suscipit, 
+                    in eos fugiat omnis aspernatur asperiores corporis veniam rem. Accusamus deleniti quae, rerum sit sed 
+                    ea obcaecati iste officiis, rerum sit sed ea obcaecati iste officiis.
+                    </p>
+                </div>
+                <figure class="slider__picture">
+                    <img src="img/img-testimonios/foto3.jpg" class="slider__img">
+                </figure>
+            </section>
+
+            <img src="img/frigth.png" class="slider__arrow" id="next">
+        </div>
+    </section>
+
+    <!-- ************************************** SECCION 5 - CONTACTO **************************************  -->
+
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contactanos</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Ponerse en contacto</div>
+                    <p>Horarios de atención 7:00 am - 6:00 pm</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-phone"></i>
+                            <div class="info">
+                                <div class="head">Celular</div>
+                                <div class="sub-title">991 835 173</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Ubicacion</div>
+                                <div class="sub-title">Piura - Piura</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Correo</div>
+                                <div class="sub-title">opticazone@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Nos ponemos en contacto contigo: </div>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Nombre " required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Correo " required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Asunto" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" placeholder="Mensaje.." required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="copyright">
+        <span>&copy; Copyright 2024 <a href="https://imlufer.000webhostapp.com/portafolio_developer/" target="_blank">LuferDev</a> | <span class="far fa-copyright"></span> Todos los derechos reservados.</span>
+    </div>
+
+    <script src="js/slider.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/script.js"></script>
+
+
+    <!--  SCRIPT BARRA DE NAVEGACIÓN  -->
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector(`header`);
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

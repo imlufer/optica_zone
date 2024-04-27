@@ -1,0 +1,1325 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+    }
+
+body {
+    background: rgb(206, 204, 204);
+    }
+
+/* BARRA DE NAVEGACIÓN */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    }
+
+header.sticky {
+    background: rgb(228, 228, 228);
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgb(15, 178, 237);
+    }
+
+header .logo {
+    font-family: 'Bruno Ace SC', cursive;
+    color: aliceblue;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    }
+
+header.sticky .logo {
+    color: rgb(64, 64, 64);
+    }
+
+header ul {
+    position: relative;
+    display: flex;
+    right: 30px;
+    }
+
+header ul li {
+    position: relative;
+    list-style: none;
+    }
+
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-decoration: none;
+    transition: .5s;
+    }
+
+header ul li a:hover {
+    transition: .5s;
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    }
+
+header.sticky ul li a {
+    color: rgb(64, 64, 64);
+    }
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(58, 57, 57);
+    border: 4px;
+    scale: .1;
+    transform-origin: left;
+    transition: scale .25s;
+    }
+
+ul li a:hover::before {
+    scale: 1.01;
+    }
+
+.ver-carrito {
+    position: fixed;
+    color: rgb(47, 47, 47);
+    right: 100px;
+    font-size: 20px;
+    transition: .3s ease-in-out;
+    color: aliceblue;
+    }
+
+header.sticky .ver-carrito {
+    color: #3d3d3d;
+    }
+
+.ver-carrito:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    }
+
+.cantidad-carrito {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    }
+
+/* ******************** FIN BARRA DE NAVEGACIÓN ******************** */
+
+section {
+    padding: 90px;
+    }
+
+/* ********************  SECCION 1 - SECCION BANNER ******************** */
+
+.titulos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    color: rgb(50, 49, 49);
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    border-bottom: 4px solid rgb(158, 152, 118);
+    font-family: 'Bruno Ace SC', cursive;
+    }
+
+.white {
+    color: aliceblue;
+    }
+
+.sec-banner {
+    background: url(../img/banner1.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    }
+
+.contenido-bn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 220px;
+    backdrop-filter: blur(1px);
+    border: 3px solid aliceblue;
+    background: rgba(72, 72, 72, 0.307);
+    }
+
+.sec-banner .titulo {
+    font-family: 'Bruno Ace SC', cursive;
+    color: aliceblue;
+    font-size: 80px;
+    letter-spacing: 2px;
+    }
+
+.sec-banner .nombre {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    }
+
+.sec-banner .profesion {
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    }
+
+/* ********************  SECCION 2 - SECCION STOCK ******************** */
+
+.sec-stock {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(233, 233, 232);
+    }
+
+.shop-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+
+.card {
+    width: 200px;
+    height: 350px;
+    object-fit: cover;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    transition: .2s ease-in-out;
+    }
+
+.card:hover {
+    transform: scale(1.04);
+    }
+
+.card img {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    }
+
+.card .nombre-prod {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: rgb(54, 55, 55);
+    }
+
+.card .comprar {
+    width: 100%;
+    padding: 10px 0;
+    background: #2d2d2d;
+    border-radius: 5px;
+    font-weight: 600;
+    color: aliceblue;
+    }
+
+.card .comprar:hover {
+    background: #3d3d3d;
+    }
+
+.vermas {
+    text-align: center;
+    padding: 10px;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: 600;
+    }
+
+.card .vermas:hover {
+    background: #3d3d3d;
+    }
+
+/* MODAL Y SU CONTENIDO */
+.modal-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 9999; 
+    padding-top: 40px; /* Ubicación de la caja */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.778);
+    }
+
+/* Contenido del modal */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    flex-direction: column;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 100%;
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    }
+
+.modal-header-title {
+    color: #fefefe;
+    margin-bottom: 20px;
+    }
+
+.modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 65%;
+    height: 120px;
+    margin: 10px;
+    }
+
+.modal-container > div > img {
+    height: 100px;
+    width: 100px;
+    }
+
+.modal-container .delete-product {
+    font-size: 22px;
+    font-weight: 600;
+    }
+
+.total-content {
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+    }
+
+@-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+        }
+
+@keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+    }
+
+/* Boton para cerrar modal */
+.close {
+    color: #f8f4f4;
+    float: right;
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    font-size: 38px;
+    font-weight: 600;
+    padding-right: 10px;
+    }
+
+.close:hover {
+    color: #bebbbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+/* ********************  SECCION 3 - SECCION POPULARES ******************** */
+
+.sec-popular {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(32, 36, 42);
+    }
+
+.container-popl {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 4 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 2 / 2 / 3 / 3; }
+    .div4 { grid-area: 3 / 2 / 4 / 3; }
+
+.div1 {
+    text-align: center;
+    padding: 10px;
+    background: #f8f4f4;
+    border-radius: 3px;
+    }
+
+.div1 img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    }
+
+.div1 .content-card {
+    width: 100%;
+    }
+
+.nomb-prdo {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    }
+
+.desc-prdo {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444141;
+    margin-bottom: 10px;
+    }
+
+.container-popl a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    transition: .25s ease-in-out;
+    filter: blur(0);
+    }
+
+.container-popl a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(36, 36, 36);
+    border: 4px;
+    scale: 0;
+    transform-origin: left;
+    transition: scale .25s ease-in-out;
+    }
+
+.container-popl a:hover::before {
+    scale: 1.01;
+    }
+
+.div2, .div3, .div4 {
+    gap: 15px;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #f8f4f4;
+    border-radius: 3px;
+    }
+
+.div2 img, .div3 img, .div4 img {
+    min-width: 20%;
+    height: 160px;
+    object-fit: cover;
+    align-items: center;
+    }
+
+.div2 .content-card, .div3 .content-card, .div4 .content-card {
+    width: 70%;
+    height: 200px;
+    object-fit: cover;
+    }
+
+/* ********************  SECCION 4 - SECCION TESTIMONIOS ******************** */
+
+.testimonios {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(28, 26, 39, 0.579) 20%, rgba(22, 25, 35, 0.574) 90%),url(../img/banner2.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.container {
+    width: 100%;
+    min-height: 60vh;
+    max-width: 1200px;
+    margin: 25px auto;
+    overflow: hidden;
+    }
+
+.slider__container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    gap: 1em;
+    }
+
+.slider__body {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    transition: opacity .3s;
+    }
+
+.slider__body--show {
+    opacity: 1;
+    pointer-events: unset;
+    }
+
+.slider__texts {
+    max-width: 700px;
+    color: aliceblue;
+    }
+
+.subtitulo {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    }
+
+.testimonio__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.7;
+    }
+
+.slider__img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #f8f4f4;
+    padding: 5px;
+    }
+
+.slider__arrow {
+    width: 90%;
+    cursor: pointer;
+    filter: invert(1);
+    }
+
+.slider__arrow:nth-of-type(2){
+    justify-self: end
+    }
+
+/* ********************  SECCION 5 - SECCION CONTACTO ******************** */
+
+.sec-contacto {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+    }
+
+.contactinfo {
+    min-width: 30%;
+    background: #2d89d5;
+    padding: 20px;
+    border-radius: 5px;
+    }
+
+.contactinfobx {
+    position: relative;
+    }
+
+.contactinfobx .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    }
+
+.contactinfobx .box .icon {
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+    }
+
+.contactinfobx .box .text {
+    display: flex;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    }
+
+.contactinfobx .box .text h3 {
+    font-weight: 600;
+    color: #e0dfd9;
+    }
+
+.formbx {
+    min-width: 70%;
+    }
+
+.formbx form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+.formbx form h3,
+.contactinfo h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    }
+
+.formbx form input,
+.formbx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: rgb(228, 227, 226);
+    color: #4b4949;
+    resize: none;
+    }
+
+.formbx form textarea {
+    height: 200px;
+    }
+
+.formbx form input::placeholder,
+.formbx form textarea::placeholder {
+    color: #696666
+    }
+
+.formbx .btnenviar {
+    max-width: 160px;
+    background: rgb(228, 227, 226);
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    transition: .3s ease-in-out;
+    }
+
+.formbx .btnenviar:hover {
+    background: rgb(194, 192, 191);
+    border-radius: 2px;
+    }
+
+.copyright {
+    background: rgb(81, 79, 79);
+    color: #ffffffc8;
+    text-align: center;
+    padding: 10px;
+    }
+    .copyright  span a {
+        color: rgb(32, 129, 165);
+        text-decoration: none;
+    }
+    
+
+@media(max-width: 1380px) {
+    .container-popl {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        }
+
+    .div1 { grid-area: 1 / 1 / 1 / 3; }
+    .div2 { grid-area: 2 / 1 / 2 / 3; }
+    .div3 { grid-area: 3 / 1 / 3 / 3; }
+    .div4 { grid-area: 4 / 1 / 4 / 3; }
+
+    .desc-prdo {
+        margin-bottom: 5px;
+        }
+}
+
+
+@media (max-width: 991px) {
+    header,
+    header.sticky {
+        padding: 25px 20px;
+        z-index: 1000;
+        }
+
+    .menu {
+        position: fixed;
+        top: 65px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: rgb(201, 200, 200);
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        overflow: auto;
+        }
+
+    .logonav {
+        width: 22px;
+        }
+
+    header .logo {
+        margin-left: 45px;
+        font-size: 18px;
+        }
+
+    .menu.active {
+        left: 0;
+        }
+
+    header ul li a {
+        color: rgb(64, 64, 64);
+        font-size: 24px;
+        margin: 10px;
+        }
+
+    .ver-carrito {
+        right: 25px;
+        }
+
+    .toggle {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/menu.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        filter: invert(0);
+        }
+
+    header.sticky .toggle {
+        filter: invert(1);
+        }
+
+    .toggle.active {
+        background-image: url("../img/close.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+        }
+
+/* ********************  SECCION 3 - SECCION POPULARES ******************** */
+
+    .container-popl {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        }
+
+        .div1 { grid-area: 1 / 1 / 1 / 3; }
+        .div2 { grid-area: 2 / 1 / 2 / 3; }
+        .div3 { grid-area: 3 / 1 / 3 / 3; }
+        .div4 { grid-area: 4 / 1 / 4 / 3; }
+
+    .div1 img{
+        height: 220px;
+        }
+
+    .nomb-prdo {
+        font-size: 14px;
+        }
+
+    .desc-prdo {
+        font-size: 12px;
+        margin-bottom: 5px;
+        }
+
+    .container-popl a {
+        font-size: 14px;
+        }
+
+    .div2, .div3, .div4 {
+        text-align: center;
+        gap: 0;
+        padding: 10px 0;
+        }
+
+    .div2 img, .div3 img, .div4 img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        }
+
+    .div2 .content-card, .div3 .content-card, .div4 .content-card {
+        width: 100%;
+        padding: 10px;
+        height: max-content;
+        }
+
+    .content {
+        display: block;
+        margin-top: 50px;
+        }
+
+    .contactinfo {
+        margin-bottom: 20px;
+        }
+}
+
+@media (max-width: 780px){
+    .slider__body {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 1em;
+        }
+
+    .slider_picture {
+        grid-row: 1/2;
+        }
+
+    .slider__img {
+        width: 180px;
+        height: 180px;
+        }
+}
+
+@media (max-width: 600px){
+    section {
+        padding: 75px 10px;
+    }
+
+    .titulos {
+        font-size: 17px;
+        }
+
+    .contenido-bn {
+        height: 200px;
+        }
+
+    .sec-banner .titulo {
+        font-size: 30px;
+        letter-spacing: 2px;
+        }
+
+    .sec-banner .titulo::before {
+        left: 30%;
+        width: 40%;
+        }
+
+    .sec-banner .nombre {
+        font-size: 12px;
+        text-align: center;
+        }
+
+    .sec-banner .profesion {
+        font-size: 15px;
+        }
+
+/* ********************  SECCION 2 - SECCION STOCK ******************** */
+
+    .shop-content {
+        gap: 15px;
+        }
+    
+    .card {
+        width: 135px;
+        height: 300px;
+        }
+    
+    .card img {
+        width: 135px;
+        height: 120px;
+        }
+    
+    .card .nombre-prod {
+        font-size: 13px;
+        height: 60px;
+        }
+    
+    .card .comprar {
+        font-size: 12px;
+        }
+    
+    .vermas {
+        margin-bottom: 0;
+        font-size: 12px;
+        }
+
+    /* Contenido del modal */
+    .modal-content {
+        padding: 10px;
+        border: 1px solid #888;
+        border-radius: 10px;
+        }
+
+    .modal-header-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+        }
+
+    .modal-container > .modal-content {
+        width: 92%;
+        height: 95px;
+        margin-bottom: 0px;
+        font-size: 10px;
+        flex-wrap: wrap;
+        }
+
+    .modal-container > div > img {
+        height: 60px;
+        width: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+        }
+
+    .modal-content h3 {
+        width: 90px;
+        }
+
+    .modal-content p {
+        text-align: center;
+        width: 20px;
+        font-size: 12px;
+        }
+
+    .modal-content .precio-modal {
+        width: 35px;
+        }
+
+    .modal-content span {
+        text-align: center;
+        width: 8px;
+        }
+
+    .modal-content .total {
+        width: 100%;
+        font-size: 11px;
+        }
+
+    .modal-container .delete-product {
+        width: 100%;
+        text-align: end;
+        font-size: 18px;
+        font-weight: 600;
+        margin: -145px -8px 0 0;
+        }
+
+    .total-content {
+        font-size: 15px;
+        color: aliceblue;
+        font-weight: 700;
+        padding: 20px;
+        text-align: center;
+        padding-top: 20px;
+        }
+
+    /* Boton para cerrar modal */
+    .close {
+        right: 30px;
+        font-size: 28px;
+        }
+
+/* ******************** SECCION 4 - SECCION TESTIMONIOS ******************** */
+
+    .slider__container {
+        grid-template-columns: 25px 1fr 25px;
+        }
+
+    .slider__arrow {
+        width: 100%;
+        }
+
+    .slider__img {
+        width: 180px;
+        height: 180px;
+        }
+
+    .subtitulo {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        text-align: center;
+        }
+
+    .testimonio__text {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+        }
+
+/* ******************** SECCION 5 - SECCION CONTACTO ******************** */
+
+
+    
+}
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact .title::after{
+    content: "ponte en contacto";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: rgb(32, 129, 165);
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.right form .button-area button{
+  color: #fff;
+  display: block;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: rgb(32, 129, 165);
+  border: 2px solid rgb(32, 129, 165);
+  transition: all 0.3s ease;
+}
+.right form .button-area button:hover{
+  color: rgb(32, 129, 165);
+  background: none;
+}
+.contact{
+    font-family: 'Poppins', sans-serif;
+}
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(32, 129, 165);
+    padding: 0 5px;
+    transform: translateX(-50%);
+}
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@media (max-width: 947px){
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+}
+
+@media (max-width: 991px) and (max-height:321px){
+    section {
+        padding: 75px 10px;
+        }
+
+    .menu {
+        padding: 10px 50px;
+        }
+
+    header ul li a {
+        font-size: 16px;
+        }
+
+    .titulos {
+        font-size: 16px;
+        }
+
+    .sec-banner, .sobre-mi, .galeria, .testimonios, .sec-contacto {
+        padding: 85px 20px;
+        }
+
+/* ******************** SECCION 1 - SECCION BANNER ******************** */
+
+    .contenido-bn {
+        height: 200px;
+        }
+
+    .sec-banner .titulo {
+        font-size: 30px;
+        letter-spacing: 2px;
+        }
+
+    .sec-banner .titulo::before {
+        left: 31%;
+        top: 2px;
+        width: 35%;
+        }
+
+    .sec-banner .nombre {
+        font-size: 10px;
+        text-align: center;
+        }
+
+    .sec-banner .profesion {
+        font-size: 14px;
+        }
+
+    /* Contenido del modal */
+    .modal-content {
+        padding: 10px;
+        border: 1px solid #888;
+        border-radius: 10px;
+        }
+
+    .modal-header-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+        }
+
+    .modal-container > .modal-content {
+        width: 92%;
+        height: 95px;
+        margin-bottom: 0px;
+        font-size: 10px;
+        flex-wrap: wrap;
+        }
+
+    .modal-container > div > img {
+        height: 60px;
+        width: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+        }
+
+    .modal-content h3 {
+        width: 90px;
+        }
+
+    .modal-content p {
+        text-align: center;
+        width: 20px;
+        font-size: 12px;
+        }
+
+    .modal-content .precio-modal {
+        width: 35px;
+        }
+
+    .modal-content span {
+        text-align: center;
+        width: 8px;
+        }
+
+    .modal-content .total {
+        width: 100%;
+        font-size: 11px;
+        }
+
+    .modal-container .delete-product {
+        width: 100%;
+        text-align: end;
+        font-size: 18px;
+        font-weight: 600;
+        margin: -145px -8px 0 0;
+        }
+
+    .total-content {
+        font-size: 15px;
+        color: aliceblue;
+        font-weight: 700;
+        padding: 20px;
+        text-align: center;
+        padding-top: 20px;
+        }
+
+    /* Boton para cerrar modal */
+    .close {
+        right: 30px;
+        font-size: 28px;
+        }
+
+/* ********************  SECCION 2 - SECCION STOCK ******************** */
+
+    .shop-content {
+        gap: 20px;
+        }
+    
+    .card {
+        width: 120px;
+        height: 300px;
+        }
+    
+    .card img {
+        width: 120px;
+        height: 120px;
+        }
+    
+    .card .nombre-prod {
+        font-size: 13px;
+        height: 60px;
+        }
+    
+    .card .comprar {
+        font-size: 12px;
+        }
+    
+    .vermas {
+        margin-bottom: 0;
+        font-size: 12px;
+        }
+
+/* ******************** SECCION 4 - SECCION TESTIMONIOS ******************** */
+
+    .slider__container {
+        grid-template-columns: 25px 1fr 25px;
+        }
+
+    .slider__arrow {
+        width: 100%;
+        }
+
+    .slider__img {
+        width: 180px;
+        height: 180px;
+        }
+
+    .subtitulo {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        text-align: center;
+        }
+
+    .testimonio__text {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+        }
+
+    .copyright {
+        font-size: 13px;
+            }
+}

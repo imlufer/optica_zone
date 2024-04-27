@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <meta name="author" lang="es" content="Calderón Tinjaca Daniel David">
+    <meta name="keywords" content="Gafas, gafas de sol, gafas para hombres, gafas para mujeres, lentes">
+    <meta name="description" content="Bienvenidos a Opticalia, encuentra tus gafas indicadas de alta calidad a un bajo costo.">
+    <!-- Carga de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="shortcut icon" href="../img/logo-portafolio.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="../css/shop.css">
+    <link rel="stylesheet" type="text/css" href="../css/childs/child10.css">
+    <title>Eagle Polarized Crystal Purple</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">Opticalia</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="../index.html#inicio" onclick="toggleMenu();">Inicio</a></li>
+            <li><a href="../index.html#stock" onclick="toggleMenu();">En stock</a></li>
+            <li><a href="../index.html#popular" onclick="toggleMenu();">Más populares</a></li>
+            <li><a href="../index.html#testimonios" onclick="toggleMenu();">Testimonios</a></li>
+            <li><a href="../index.html#contacto" onclick="toggleMenu();">Contacto</a></li>
+            <li</li>
+        </ul>
+    </div><span class="ver-carrito" id="verCarrito">
+        <i class="fa fa-shopping-cart"></i><span id="cantidadCarrito" class="cantidad-carrito">
+    </span></span>
+    </header>
+
+    <section class="sec-producto">
+            <div class="container-shop">
+                <div class="cont-imgs">
+                    <img src="../img/productos/hawkers-eagle-polarized-crystal-purple-HEAG22SKMP-f.jpg" 
+                        alt="eagle-polarized-crystal-purple-f">
+                    <img src="../img/productos/hawkers-eagle-polarized-crystal-purple-HEAG22SKMP-l.jpg" 
+                        alt="eagle-polarized-crystal-purple-l">
+                    <img src="../img/productos/hawkers-eagle-polarized-crystal-purple-HEAG22SKMP-d1.jpg" 
+                        alt="eagle-polarized-crystal-purple-d1">
+                </div>
+
+                <div class="content-shop">
+                    <!--shop content-->
+                    <div id="shopContent" class="shop-content"></div>
+                        <span class="titulo-detalles">Calidad y detalles</span>
+                        <p>Un diseño de estilo aviador que combina patillas TR90, doble puente y puntos de bisagra de acero inoxidable, 
+                        y aros híbridos TR90 de metal. Este modelo plateado, de cristal transparente tiene lentes polarizadas, espejadas y 
+                        de color púrpura iridiscente.</p>
+                        <ul>
+                            <li>Modelo Unisex</li>
+                            <li>Lentes fabricadas con material bio tac polarizado y protección uv400</li>
+                            <li>Lentes categoría 3</li>
+                            <li>Gafas de sol polarizadas: otorga una visión sin reflejos y contraste natural de colores</li>
+                            <li>Gafas de sol fabricadas en TR90 con el sello de EMS, considerado el mejor Nylon para monturas del mundo que proporciona más flexibilidad y resistencia</li>
+                            <li>Doble puente metálico que aporta solidez a la estructura frontal de la montura y eleva la resistencia del producto frente a rotura y deformación</li>
+                            <li>Almohadillas de silicona ajustables</li>
+                            <li>Terminal de la patilla en TR90, considerado el mejor Nylon para monturas del mundo que proporciona más flexibilidad y resistencia. Más ancho para mejorar la ergonomía y confort</li>
+                            <li>Bisagra de 3 barras para un mayor agarre y durabilidad</li>
+                            <li>Medidas: Frontal 147,5 mm; Patillas 140 mm ; Puente 18 mm ; Alto 54 mm</li>
+                            <li>Incluye: Funda en microfibra y caja</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--modal container-->
+                <div id="modal-container" class="modal-container"></div>
+
+                <div class="info-adicional">
+                    <ul>
+                        <li><img src="../img/p-pago-seguro.svg" alt="pago-seguro"><span>100% Pago Seguro</span></li>
+                        <li><img src="../img/p-durabilidad.svg" alt="durabilidad"><span>Extra Durabilidad</span></li>
+                        <li><img src="../img/p-garantia.svg" alt="garantía"><span>1 Año de Garantía</span></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+
+    <div class="copyright">
+        <p>Copyright © 2023 Daniel David Calderón Tinjaca. Todos los derechos reservados</p>
+    </div>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/carrito.js"></script>
+
+    <!--  SCRIPT BARRA DE NAVEGACIÓN  -->
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector(`header`);
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
