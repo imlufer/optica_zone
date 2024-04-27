@@ -1,73 +1,74 @@
-$(document).ready(function(){
-    $(window).scroll(function(){
-        // sticky navbar on scroll script
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
-        }
-        
-        // scroll-up button show/hide script
-        if(this.scrollY > 500){
-            $('.scroll-up-btn').addClass("show");
-        }else{
-            $('.scroll-up-btn').removeClass("show");
-        }
-    });
+// Obtener todos los elementos que deseas animar
+const stock = document.querySelectorAll('.sec-stock');
+const popular = document.querySelectorAll('.sec-popular');
+const testimonios = document.querySelectorAll('.testimonios');
+const contact = document.querySelectorAll('.contact');
 
-    // slide-up script
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
-        // removing smooth scroll on slide-up button click
-        $('html').css("scrollBehavior", "auto");
-    });
 
-    $('.navbar .menu li a').click(function(){
-        // applying again smooth scroll on menu items click
-        $('html').css("scrollBehavior", "smooth");
-    });
+// Función para verificar la posición de los elementos y mostrarlos si están en el viewport
+function showElementsOnScroll() {
+    stock.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
-    // toggle menu/navbar script
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
-    });
-
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["Producción", "Comercialización"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    var typed = new Typed(".typing-2", {
-        strings: ["Producción", "Comercialización"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
+        // Si el elemento está más abajo que la mitad de la ventana gráfica, mostrarlo
+        if (elementTop < windowHeight / 2) {
+            element.classList.add('visible');
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+            element.classList.remove('visible');
         }
     });
-});
+    popular.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // Si el elemento está más abajo que la mitad de la ventana gráfica, mostrarlo
+        if (elementTop < windowHeight / 2) {
+            element.classList.add('visible');
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+            element.classList.remove('visible');
+        }
+    });
+    testimonios.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // Si el elemento está más abajo que la mitad de la ventana gráfica, mostrarlo
+        if (elementTop < windowHeight / 2) {
+            element.classList.add('visible');
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+            element.classList.remove('visible');
+        }
+    });
+    contact.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // Si el elemento está más abajo que la mitad de la ventana gráfica, mostrarlo
+        if (elementTop < windowHeight / 2) {
+            element.classList.add('visible');
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+            element.classList.remove('visible');
+        }
+    });
+}
+
+
+// Función para manejar la animación al hacer scroll
+function handleScroll() {
+    window.requestAnimationFrame(showElementsOnScroll);
+}
+
+// Agregar un listener para el evento scroll
+window.addEventListener('scroll', handleScroll);
+
+// Llamar a la función una vez al cargar la página para verificar el estado inicial
+showElementsOnScroll();
